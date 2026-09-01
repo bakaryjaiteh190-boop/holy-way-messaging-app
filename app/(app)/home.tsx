@@ -34,7 +34,7 @@ export default function HomeScreen() {
           style={styles.logoutButton}
           onPress={handleLogout}
         >
-          <Text style={styles.logoutText}>⏻</Text>
+          <Text style={styles.logoutText}>⌛</Text>
         </Pressable>
       </View>
 
@@ -58,18 +58,6 @@ export default function HomeScreen() {
           <View style={styles.featureContent}>
             <Text style={styles.featureText}>Messages</Text>
             <Text style={styles.featureDesc}>Real-time messaging</Text>
-          </View>
-          <Text style={styles.arrow}>→</Text>
-        </Pressable>
-
-        <Pressable
-          style={styles.feature}
-          onPress={() => router.push('/(app)/jokes')}
-        >
-          <Text style={styles.icon}>😂</Text>
-          <View style={styles.featureContent}>
-            <Text style={styles.featureText}>Joke Generator</Text>
-            <Text style={styles.featureDesc}>Get random jokes</Text>
           </View>
           <Text style={styles.arrow}>→</Text>
         </Pressable>
@@ -113,6 +101,14 @@ export default function HomeScreen() {
           <View style={styles.featureContent}>
             <Text style={styles.featureText}>Business</Text>
             <Text style={styles.featureDesc}>Connect professionally</Text>
+          </View>
+        </View>
+
+        <View style={styles.featureDisabled}>
+          <Text style={styles.icon}>🔎</Text>
+          <View style={styles.featureContent}>
+            <Text style={styles.featureText}>Search</Text>
+            <Text style={styles.featureDesc}>Find people & content</Text>
           </View>
         </View>
       </ScrollView>

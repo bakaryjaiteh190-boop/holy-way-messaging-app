@@ -22,12 +22,6 @@ export default function AppLayout() {
         }}
       />
       <Stack.Screen
-        name="jokes"
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
         name="clock"
         options={{
           headerShown: false,
