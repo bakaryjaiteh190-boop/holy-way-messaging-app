@@ -33,6 +33,12 @@ export default function AppLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="todos"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }

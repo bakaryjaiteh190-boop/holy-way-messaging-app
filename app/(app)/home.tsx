@@ -86,6 +86,18 @@ export default function HomeScreen() {
           <Text style={styles.arrow}>→</Text>
         </Pressable>
 
+        <Pressable
+          style={styles.feature}
+          onPress={() => router.push('/(app)/todos')}
+        >
+          <Text style={styles.icon}>✓</Text>
+          <View style={styles.featureContent}>
+            <Text style={styles.featureText}>Todo List</Text>
+            <Text style={styles.featureDesc}>Manage your tasks</Text>
+          </View>
+          <Text style={styles.arrow}>→</Text>
+        </Pressable>
+
         <Text style={styles.sectionTitle}>Coming Soon</Text>
 
         <View style={styles.featureDisabled}>
