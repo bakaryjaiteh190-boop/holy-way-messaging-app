@@ -1,0 +1,6 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		cd /workspaces/holy-way-messaging-app
+	]
+}npm install npx expo start --tunnel
