@@ -21,18 +21,10 @@ export default function AppLayout() {
           headerShown: false,
         }}
       />
-      <Stack.Screen
-        name="clock"
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="todos"
-        options={{
-          headerShown: false,
-        }}
-      />
+      <Stack.Screen name="discover" options={{ headerShown: false }} />
+      <Stack.Screen name="create" options={{ headerShown: false }} />
+      <Stack.Screen name="activity" options={{ headerShown: false }} />
+      <Stack.Screen name="profile" options={{ headerShown: false }} />
     </Stack>
   );
 }

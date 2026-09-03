@@ -7,7 +7,6 @@ export default function RootLayout() {
   const router = useRouter();
 
   useEffect(() => {
-    // Check initial auth state
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) {
         router.replace('/(app)/home');
@@ -16,9 +15,8 @@ export default function RootLayout() {
       }
     });
 
-    // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
+      (_event, session) => {
         if (session) {
           router.replace('/(app)/home');
         } else {
@@ -28,7 +26,7 @@ export default function RootLayout() {
     );
 
     return () => subscription?.unsubscribe();
-  }, []);
+  }, [router]);
 
   return (
     <Stack>
